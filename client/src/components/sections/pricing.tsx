@@ -28,7 +28,7 @@ export default function Pricing() {
         "Extended revisions"
       ],
       buttonText: "Get Started",
-      buttonVariant: "default" as const,
+      buttonVariant: "outline" as const,
       isPopular: false
     },
     {
@@ -109,7 +109,7 @@ export default function Pricing() {
               <Button
                 onClick={handleContactClick}
                 variant={plan.buttonVariant}
-                className={`w-full ${plan.buttonVariant === 'default' ? 'bg-accent hover:bg-accent/90' : ''}`}
+                className="w-full"
               >
                 {plan.buttonText}
               </Button>
