@@ -81,8 +81,8 @@ export default function Navigation() {
                 Contact
               </Link>
               <a
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "contact")}
+                href="#contact-form"
+                onClick={(e) => handleNavClick(e, "contact-form")}
                 className="bg-accent text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-accent/90 transition-colors"
               >
                 Get Started
@@ -142,8 +142,8 @@ export default function Navigation() {
                 Contact
               </Link>
               <a
-                href="#contact"
-                onClick={(e) => handleNavClick(e, "contact")}
+                href="#contact-form"
+                onClick={(e) => handleNavClick(e, "contact-form")}
                 className="bg-accent text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Get Started
