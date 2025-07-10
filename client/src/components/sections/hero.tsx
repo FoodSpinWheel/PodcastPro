@@ -31,7 +31,13 @@ export default function Hero() {
               Get a Free Trial Episode
             </Button>
           </div>
-
+          <div className="hidden lg:block">
+            <img
+              src="@assets/austin-distel-VCFxt2yT1eQ-unsplash_1752120368045.jpg"
+              alt="Professional podcast recording studio setup"
+              className="rounded-xl shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </section>

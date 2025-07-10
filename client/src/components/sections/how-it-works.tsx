@@ -41,6 +41,22 @@ export default function HowItWorks() {
           ))}
         </div>
         
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="@assets/kit-formerly-convertkit-waxDxYM2XI4-unsplash_1752120368045.jpg"
+              alt="Professional podcast recording with microphone and setup"
+              className="w-full h-64 object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="@assets/pexels-magda-ehlers-pexels-1054713_1752120368045.jpg"
+              alt="Professional podcast microphone and recording equipment"
+              className="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
 
       </div>
     </section>
