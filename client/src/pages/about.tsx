@@ -37,8 +37,8 @@ export default function About() {
             </div>
             <div>
               <img
-                src="/attached_assets/pexels-magda-ehlers-pexels-1054713_1752120368045.jpg"
-                alt="Professional podcasting setup with microphone and headphones"
+                src="/attached_assets/jonathan-farber-KVlcVi-Ulgo-unsplash_1752121673716.jpg"
+                alt="Professional podcasting studio with microphone and equipment"
                 className="w-full h-96 object-cover rounded-xl shadow-2xl"
               />
             </div>
