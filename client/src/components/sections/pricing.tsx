@@ -126,9 +126,9 @@ export default function Pricing() {
   ];
 
   const handleContactClick = () => {
-    const contactElement = document.getElementById("contact");
-    if (contactElement) {
-      const offsetTop = contactElement.offsetTop - 80;
+    const contactFormElement = document.getElementById("contact-form");
+    if (contactFormElement) {
+      const offsetTop = contactFormElement.offsetTop - 80;
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
