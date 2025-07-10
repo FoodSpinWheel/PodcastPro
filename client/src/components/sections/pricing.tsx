@@ -66,31 +66,53 @@ export default function Pricing() {
       icon: FileText,
       name: "Blog Recap",
       price: "$50",
-      description: "600-1000 word blog post derived from the episode transcript and show notes. SEO-optimized headline and subheadings. Keywords integrated naturally."
+      features: [
+        "600-1000 word blog post derived from the episode transcript and show notes",
+        "SEO-optimized headline and subheadings",
+        "Keywords integrated naturally"
+      ]
     },
     {
       icon: Mail,
       name: "Newsletter Summary",
       price: "$20",
-      description: "100-200 word email-ready summary. Catchy subject line and call to action. Optional thumbnail image recommendation."
+      features: [
+        "100-200 word email-ready summary",
+        "Catchy subject line and call to action",
+        "Optional thumbnail image recommendation"
+      ]
     },
     {
       icon: Video,
       name: "Audiograms",
       price: "$45",
-      description: "30-60 second video clip. Captions and waveform animation. Branded colors and podcast artwork. MP4 delivery ready for social media."
+      features: [
+        "30-60 second video clip",
+        "Captions and waveform animation",
+        "Branded colors and podcast artwork",
+        "MP4 delivery ready for social media"
+      ]
     },
     {
       icon: FileImage,
       name: "Episode Transcripts",
       price: "$30",
-      description: "Clean, proofread transcript. Delivered in PDF and Word format. Time-stamps included."
+      features: [
+        "Clean, proofread transcript",
+        "Delivered in PDF and Word format",
+        "Time-stamps included"
+      ]
     },
     {
       icon: Search,
       name: "SEO Keyword Report",
       price: "$50",
-      description: "List of 10-15 related keywords. Suggested hashtags. Recommended blog post topics. Short paragraph on strategy."
+      features: [
+        "List of 10-15 related keywords",
+        "Suggested hashtags",
+        "Recommended blog post topics",
+        "Short paragraph on strategy"
+      ]
     }
   ];
 
@@ -172,7 +194,14 @@ export default function Pricing() {
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">{addon.description}</p>
+                <ul className="space-y-2">
+                  {addon.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <Check className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-600 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
                 <Button
                   onClick={handleContactClick}
                   variant="outline"
