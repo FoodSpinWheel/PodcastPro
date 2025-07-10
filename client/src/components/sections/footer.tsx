@@ -56,7 +56,7 @@ export default function Footer() {
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <SiInstagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://x.com/elevaterecap" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <SiX className="h-6 w-6" />
               </a>
             </div>
