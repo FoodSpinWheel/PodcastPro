@@ -226,13 +226,6 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  onClick={handleContactClick}
-                  variant="outline"
-                  className="w-full mt-4"
-                >
-                  Add to Order
-                </Button>
               </div>
             ))}
           </div>
