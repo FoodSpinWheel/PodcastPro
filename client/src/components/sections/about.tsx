@@ -20,13 +20,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="hidden lg:block">
-            <img
-              src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Professional podcast recording studio"
-              className="rounded-xl shadow-2xl"
-            />
-          </div>
+
         </div>
       </div>
     </section>

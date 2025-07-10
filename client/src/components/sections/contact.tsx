@@ -67,14 +67,7 @@ export default function Contact() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Professional podcast recording equipment and microphones"
-              className="rounded-xl shadow-lg w-full"
-            />
-          </div>
+        <div className="max-w-2xl mx-auto">
           <Card>
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
