@@ -1,0 +1,61 @@
+Please create a professional, single-page website for a podcast show notes and content service called Elevate Recap.
+
+The website should include the following sections, styled with modern, clean fonts (like Montserrat and Open Sans), a white background, deep blue (#1F3C88) primary color, and bright teal (#00C4CC) accents:
+
+1. **Hero Section**
+   - Headline: "Professional Show Notes & Episode Summaries—Done For You"
+   - Subheadline: "Save hours every month. Get polished podcast summaries, timestamps, SEO descriptions, and social captions—fast."
+   - Call to Action Button: "Get a Free Trial Episode"
+
+2. **How It Works Section**
+   - Title: "How It Works"
+   - 3–4 sentences explaining: "Elevate Recap makes it effortless to get professional show notes and episode summaries. Just send us your audio, and we’ll handle everything from transcription to polished content creation. Our AI-powered process is fast, accurate, and designed to save you hours of work. In just a few days, you’ll have ready-to-publish materials that help your podcast look and sound more professional."
+   - Step Blocks:
+     1. **Upload Your Audio** – 2–3 sentences explaining the client sends the audio file or link and we take care of the rest.
+     2. **We Transcribe & Summarize** – 2–3 sentences describing how AI transcription and GPT-4 generate all the content.
+     3. **Get Ready-to-Publish Content** – 2–3 sentences about fast delivery and easy publishing.
+   - Optional icons for each step.
+
+3. **What You Get Section**
+   - Title: "What You Get"
+   - Each service title with 3–4 sentences describing:
+     - Show Notes Summary
+     - Timestamps & Chapters
+     - SEO-Optimized Title & Description
+     - Guest Bio
+     - Social Media Captions
+
+4. **Pricing Section**
+   - Title: "Simple Monthly Packages"
+   - Table showing:
+     - Starter: 4 episodes, $400/month
+     - Growth: 8 episodes, $760/month
+     - Pro: 12 episodes, $1,080/month
+     - Elite: 15+ episodes, $1,275+/month
+   - Text explaining that any plan with 8+ episodes includes premium benefits:
+     - Priority processing
+     - Dedicated project manager
+     - Extended revisions
+     - Monthly performance insights
+     - Discounted add-ons
+     - Priority support
+   - Optional note about flexible per-episode pricing (minimum 4 episodes).
+   - Call to Action Button: "Book Your Free Trial Episode"
+
+5. **About Section**
+   - Title: "About Elevate Recap"
+   - 3–4 paragraphs explaining why the business was founded and who it helps (as previously provided).
+
+6. **Contact Section**
+   - Title: "Ready to Elevate Your Podcast?"
+   - Text inviting clients to schedule a free trial episode.
+   - Contact form with fields for Name, Email, Podcast Link, Message.
+   - Call to Action Button: "Get Started Free"
+
+7. **Footer**
+   - Logo or site name.
+   - Email: hello@elevaterecap.com
+   - Social icons (LinkedIn, Twitter).
+   - Copyright © 2025 Elevate Recap.
+
+Please make the site mobile-responsive, clean, and professional. Use consistent spacing and clear typography to keep everything easy to read.
