@@ -12,28 +12,17 @@ export default function About() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Elevate Recap</h2>
               <p className="text-lg text-gray-600 mb-6">
-                We're a team of podcast enthusiasts and content professionals who understand the time-consuming process of creating quality show notes and episode summaries.
+                Elevate Recap was founded with a simple mission: to help podcasters focus on what they love—creating meaningful conversations—without getting bogged down in time-consuming content tasks. After seeing how much energy hosts spend transcribing, summarizing, and promoting each episode, we knew there had to be a better way. That's why we built a streamlined service combining advanced AI with experienced human editing to deliver polished, professional show notes and promotional materials faster than ever.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Founded by podcasters for podcasters, Elevate Recap was born from the frustration of spending countless hours on post-production content creation instead of focusing on what matters most—creating great content and growing your audience.
+                We work with independent creators, growing podcasts, and established brands that understand the power of consistent, high-quality content. Whether you publish a few episodes a month or release new shows daily, Elevate Recap helps you maintain a professional presence without adding extra work to your plate. Our clients range from business coaches and marketers to educators, creatives, and health experts—people who care deeply about sharing knowledge but don't want to spend hours formatting summaries and writing social posts.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                By blending AI efficiency with a personal touch, we deliver clear, engaging episode content you'll be proud to share. Every piece we create is designed to save you time, boost your discoverability, and help your podcast stand out in a crowded market. With Elevate Recap, you can feel confident that each episode is presented at its best, every time.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Our mission is simple: save you time while elevating your podcast's professional presentation. We handle the detailed work so you can focus on what you do best—hosting amazing conversations and building your community.
+                Our team believes that great podcasts deserve great support. If you're ready to elevate your workflow and give your listeners a richer experience, we'd love to help you make it happen.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-accent rounded-full mr-4"></div>
-                  <span className="text-gray-700">Founded by experienced podcasters</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-accent rounded-full mr-4"></div>
-                  <span className="text-gray-700">Serving 200+ podcasters worldwide</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-accent rounded-full mr-4"></div>
-                  <span className="text-gray-700">Average 10+ hours saved per month</span>
-                </div>
-              </div>
             </div>
             <div>
               <img
