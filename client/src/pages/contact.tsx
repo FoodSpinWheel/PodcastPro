@@ -160,16 +160,12 @@ export default function Contact() {
 
           <div className="mt-12 text-center">
             <div className="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-primary mb-4">Other Ways to Reach Us</h3>
               <div className="space-y-4 text-gray-600">
-                <p>
-                  <strong>Email:</strong> levi@elevaterecap.com
-                </p>
                 <p>
                   <strong>Response Time:</strong> We typically respond within 24 hours during business days.
                 </p>
                 <p>
-                  <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM PST
+                  <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM MST
                 </p>
               </div>
             </div>
