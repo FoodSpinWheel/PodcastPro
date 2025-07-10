@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link, useLocation } from "wouter";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +39,9 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-primary">Elevate Recap</h1>
+            <Link href="/" className="text-2xl font-bold text-primary hover:text-accent transition-colors">
+              Elevate Recap
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -64,13 +68,12 @@ export default function Navigation() {
               >
                 Pricing
               </a>
-              <a
-                href="#about"
-                onClick={(e) => handleNavClick(e, "about")}
+              <Link
+                href="/about"
                 className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 About
-              </a>
+              </Link>
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "contact")}
@@ -118,13 +121,13 @@ export default function Navigation() {
               >
                 Pricing
               </a>
-              <a
-                href="#about"
-                onClick={(e) => handleNavClick(e, "about")}
+              <Link
+                href="/about"
                 className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </a>
+              </Link>
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "contact")}
