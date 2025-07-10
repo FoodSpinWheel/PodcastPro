@@ -172,6 +172,30 @@ export default function Pricing() {
           ))}
         </div>
         
+        {/* Flexible Pricing Section */}
+        <div className="mt-12 text-center">
+          <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-primary mb-4">Premium Benefits (8+ Episodes)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-600">
+              {premiumBenefits.map((benefit, index) => (
+                <div key={index} className="flex items-center">
+                  <benefit.icon className="h-4 w-4 text-accent mr-2" />
+                  <span>{benefit.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="mt-6 text-gray-600">
+            Need flexible pricing? We offer per-episode rates starting at $120 each.
+          </p>
+          <Button
+            onClick={handleContactClick}
+            className="mt-4 bg-accent text-white px-8 py-3 font-semibold hover:bg-accent/90 transition-colors"
+          >
+            Book Your Free Trial Episode
+          </Button>
+        </div>
+        
         {/* Add-ons Section */}
         <div className="mt-16">
           <div className="text-center mb-12">
@@ -212,29 +236,6 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-        </div>
-        
-        <div className="mt-12 text-center">
-          <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-primary mb-4">Premium Benefits (8+ Episodes)</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-600">
-              {premiumBenefits.map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <benefit.icon className="h-4 w-4 text-accent mr-2" />
-                  <span>{benefit.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <p className="mt-6 text-gray-600">
-            Need flexible pricing? We offer per-episode rates starting at $120 each.
-          </p>
-          <Button
-            onClick={handleContactClick}
-            className="mt-4 bg-accent text-white px-8 py-3 font-semibold hover:bg-accent/90 transition-colors"
-          >
-            Book Your Free Trial Episode
-          </Button>
         </div>
       </div>
     </section>
