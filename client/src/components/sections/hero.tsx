@@ -13,14 +13,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-primary to-blue-800 text-white pt-20 pb-16">
+    <section className="bg-gradient-to-br from-black to-gray-800 text-white pt-20 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Professional Show Notes & Episode Summaries—Done For You
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-gray-300">
               Save hours every month. Get polished podcast summaries, timestamps, SEO descriptions, and social captions—fast.
             </p>
             <Button
