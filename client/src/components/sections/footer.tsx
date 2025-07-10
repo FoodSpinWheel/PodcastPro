@@ -18,7 +18,7 @@ export default function Footer() {
             <div className="space-y-2">
               <p className="text-gray-300 flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                hello@elevaterecap.com
+                levi@elevaterecap.com
               </p>
             </div>
           </div>
