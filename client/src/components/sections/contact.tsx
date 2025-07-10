@@ -68,7 +68,7 @@ export default function Contact() {
           />
         </div>
         
-        <div className="text-center mb-12">
+        <div id="contact-form" className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Ready to Elevate Your Podcast?</h2>
           <p className="text-lg text-gray-600">
             Get started with a free trial episode and see the difference professional show notes can make.

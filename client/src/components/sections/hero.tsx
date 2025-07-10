@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   const handleGetStarted = () => {
-    const contactElement = document.getElementById("contact");
+    const contactElement = document.getElementById("contact-form");
     if (contactElement) {
       const offsetTop = contactElement.offsetTop - 80;
       window.scrollTo({
