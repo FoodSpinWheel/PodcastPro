@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">Elevate Recap</h3>
             <p className="text-gray-300">
@@ -14,14 +14,36 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
               <Link 
-                href="/contact" 
-                className="text-gray-300 hover:text-white flex items-center transition-colors"
+                href="/about" 
+                className="text-gray-300 hover:text-white block transition-colors"
               >
-                <Mail className="h-4 w-4 mr-2" />
-                Contact Us
+                About Us
+              </Link>
+              <Link 
+                href="/contact" 
+                className="text-gray-300 hover:text-white block transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <div className="space-y-2">
+              <Link 
+                href="/privacy-policy" 
+                className="text-gray-300 hover:text-white block transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                href="/terms-of-service" 
+                className="text-gray-300 hover:text-white block transition-colors"
+              >
+                Terms of Service
               </Link>
             </div>
           </div>
@@ -36,6 +58,15 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
           <p>&copy; 2025 Elevate Recap. All rights reserved.</p>
+          <div className="mt-2 space-x-4">
+            <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-gray-400">•</span>
+            <Link href="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Elevate Recap is a professional single-page website for a podcast show notes and content service. The application is built as a full-stack solution with a React frontend and Express backend, designed to help podcasters save time by providing AI-powered transcription and content creation services.
+Elevate Recap is a professional website for a podcast show notes and content service. The application is built as a full-stack solution with a React frontend and Express backend, designed to help podcasters save time by providing AI-powered transcription and content creation services. The site now includes comprehensive legal pages and uses FormSubmit for contact form submissions.
 
 ## User Preferences
 
@@ -43,14 +43,17 @@ Preferred communication style: Simple, everyday language.
 - `GET /api/contact` - Retrieve all contact submissions (admin)
 
 ### Frontend Pages
-- **Home Page**: Single-page application with multiple sections:
+- **Home Page**: Landing page with multiple sections:
   - Hero section with main value proposition
   - How It Works (3-step process)
   - What You Get (service features)
   - Pricing (4 pricing tiers)
-  - About section
   - Contact form
   - Footer
+- **About Page**: Detailed company information and mission
+- **Contact Page**: Comprehensive contact form with inquiry types
+- **Privacy Policy Page**: Complete privacy policy for Elevate Recap
+- **Terms of Service Page**: Legal terms and conditions
 
 ### Storage Layer
 - **Interface**: IStorage interface for data operations
@@ -60,11 +63,11 @@ Preferred communication style: Simple, everyday language.
 ## Data Flow
 
 1. **Contact Form Submission**:
-   - User fills out contact form on frontend
-   - Form data validated using Zod schema
-   - Submitted via POST to `/api/contact`
-   - Stored in database/memory storage
-   - Success/error feedback provided to user
+   - User fills out contact form on frontend or dedicated contact page
+   - Form data validated on client side
+   - Submitted directly to FormSubmit service (levi@elevaterecap.com)
+   - Automatic response emails sent to users
+   - Success/error feedback provided to user via toast notifications
 
 2. **Content Delivery**:
    - Static assets served by Vite in development
@@ -87,7 +90,7 @@ Preferred communication style: Simple, everyday language.
 - **TSX**: TypeScript execution for development server
 
 ### Third-party Services
-- **Neon Database**: Serverless PostgreSQL hosting
+- **FormSubmit**: Contact form email delivery service
 - **Unsplash**: Stock images for hero and about sections
 - **Google Fonts**: Montserrat and Open Sans typography
 
