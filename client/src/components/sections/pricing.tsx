@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star, Crown, Zap } from "lucide-react";
+import { Check, Star, Crown, Zap, FileText, Mail, Video, FileImage, Search } from "lucide-react";
 
 export default function Pricing() {
   const plans = [
@@ -61,6 +61,39 @@ export default function Pricing() {
     }
   ];
 
+  const addOns = [
+    {
+      icon: FileText,
+      name: "Blog Recap",
+      price: "$50",
+      description: "600-1000 word blog post derived from the episode transcript and show notes. SEO-optimized headline and subheadings. Keywords integrated naturally."
+    },
+    {
+      icon: Mail,
+      name: "Newsletter Summary",
+      price: "$20",
+      description: "100-200 word email-ready summary. Catchy subject line and call to action. Optional thumbnail image recommendation."
+    },
+    {
+      icon: Video,
+      name: "Audiograms",
+      price: "$45",
+      description: "30-60 second video clip. Captions and waveform animation. Branded colors and podcast artwork. MP4 delivery ready for social media."
+    },
+    {
+      icon: FileImage,
+      name: "Episode Transcripts",
+      price: "$30",
+      description: "Clean, proofread transcript. Delivered in PDF and Word format. Time-stamps included."
+    },
+    {
+      icon: Search,
+      name: "SEO Keyword Report",
+      price: "$50",
+      description: "List of 10-15 related keywords. Suggested hashtags. Recommended blog post topics. Short paragraph on strategy."
+    }
+  ];
+
   const premiumBenefits = [
     { icon: Zap, text: "Priority processing" },
     { icon: Star, text: "Dedicated project manager" },
@@ -115,6 +148,41 @@ export default function Pricing() {
               </Button>
             </div>
           ))}
+        </div>
+        
+        {/* Add-ons Section */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">Add-Ons</h3>
+            <p className="text-lg text-gray-600">Enhance your podcast content with these additional services</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {addOns.map((addon, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent/10 p-3 rounded-lg mr-4">
+                    <addon.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-primary">{addon.name}</h4>
+                    <p className="text-2xl font-bold text-gray-800">
+                      {addon.price}
+                      <span className="text-sm text-gray-500">/episode</span>
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">{addon.description}</p>
+                <Button
+                  onClick={handleContactClick}
+                  variant="outline"
+                  className="w-full mt-4"
+                >
+                  Add to Order
+                </Button>
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className="mt-12 text-center">
