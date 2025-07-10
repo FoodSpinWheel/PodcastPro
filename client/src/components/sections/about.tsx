@@ -22,7 +22,7 @@ export default function About() {
           </div>
           <div className="hidden lg:block">
             <img
-              src="@assets/pexels-jean-balzan-210755-682082_1752120368045.jpg"
+              src="/attached_assets/pexels-jean-balzan-210755-682082_1752120368045.jpg"
               alt="Professional gold microphone for podcast recording"
               className="rounded-xl shadow-2xl"
             />
