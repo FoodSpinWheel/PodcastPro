@@ -50,7 +50,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://linkedin.com/in/elevate-recap-7a4b0b373" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <SiLinkedin className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
