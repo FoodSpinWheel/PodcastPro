@@ -227,7 +227,7 @@ export default function Pricing() {
             </div>
           </div>
           <p className="mt-6 text-gray-600">
-            Need flexible pricing? We offer per-episode rates starting at $115 each (minimum 2 episodes).
+            Need flexible pricing? We offer per-episode rates starting at $120 each.
           </p>
           <Button
             onClick={handleContactClick}
