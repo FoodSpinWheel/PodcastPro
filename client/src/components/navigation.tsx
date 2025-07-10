@@ -74,6 +74,12 @@ export default function Navigation() {
               >
                 About
               </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Contact
+              </Link>
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "contact")}
@@ -127,6 +133,13 @@ export default function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
               <a
                 href="#contact"
