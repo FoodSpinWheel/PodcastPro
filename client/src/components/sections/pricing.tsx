@@ -29,7 +29,7 @@ export default function Pricing() {
       ],
       buttonText: "Get Started",
       buttonVariant: "default" as const,
-      isPopular: true
+      isPopular: false
     },
     {
       name: "Pro",
@@ -91,12 +91,7 @@ export default function Pricing() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
-            <div key={index} className={`bg-white p-8 rounded-xl shadow-lg relative ${plan.isPopular ? 'border-2 border-accent' : ''}`}>
-              {plan.isPopular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </div>
-              )}
+            <div key={index} className="bg-white p-8 rounded-xl shadow-lg relative">
               <h3 className="text-xl font-semibold text-primary mb-2">{plan.name}</h3>
               <div className="text-3xl font-bold text-gray-800 mb-4">
                 {plan.price}
