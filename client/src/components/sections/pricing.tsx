@@ -65,7 +65,7 @@ export default function Pricing() {
     {
       icon: FileText,
       name: "Blog Recap",
-      price: "$50",
+      price: "$60",
       features: [
         "600-1000 word blog post derived from the episode transcript and show notes",
         "SEO-optimized headline and subheadings",
@@ -75,7 +75,7 @@ export default function Pricing() {
     {
       icon: Mail,
       name: "Newsletter Summary",
-      price: "$20",
+      price: "$25",
       features: [
         "100-200 word email-ready summary",
         "Catchy subject line and call to action",
@@ -85,7 +85,7 @@ export default function Pricing() {
     {
       icon: Video,
       name: "Audiograms",
-      price: "$45",
+      price: "$50",
       features: [
         "30-60 second video clip",
         "Captions and waveform animation",
@@ -96,7 +96,7 @@ export default function Pricing() {
     {
       icon: FileImage,
       name: "Episode Transcripts",
-      price: "$30",
+      price: "$40",
       features: [
         "Clean, proofread transcript",
         "Delivered in PDF and Word format",
