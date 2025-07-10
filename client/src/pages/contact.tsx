@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactFormData {
   name: string;
@@ -25,35 +23,10 @@ export default function Contact() {
     inquiryType: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", {
-        name: data.name,
-        email: data.email,
-        podcastLink: "",
-        message: `Inquiry Type: ${data.inquiryType}\n\n${data.message}`
-      });
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Success!",
-        description: "Your message has been sent. We'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", inquiryType: "", message: "" });
-    },
-    onError: (error) => {
-      toast({
-        title: "Error",
-        description: "Failed to send your message. Please try again.",
-        variant: "destructive",
-      });
-    }
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
       toast({
@@ -63,7 +36,36 @@ export default function Contact() {
       });
       return;
     }
-    contactMutation.mutate(formData);
+
+    setIsSubmitting(true);
+    
+    try {
+      const form = e.target as HTMLFormElement;
+      const formDataObj = new FormData(form);
+      
+      const response = await fetch("https://formsubmit.co/levi@elevaterecap.com", {
+        method: "POST",
+        body: formDataObj
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Your message has been sent. We'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", inquiryType: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -92,6 +94,11 @@ export default function Contact() {
             <Card>
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* FormSubmit hidden fields */}
+                  <input type="hidden" name="_subject" value="New Contact Form Submission - Elevate Recap" />
+                  <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
+                  <input type="hidden" name="_autoresponse" value="Thank you for contacting Elevate Recap! We'll get back to you within 24 hours." />
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="name">Name *</Label>
@@ -130,6 +137,7 @@ export default function Contact() {
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
+                    <input type="hidden" name="inquiryType" value={formData.inquiryType} />
                   </div>
                   
                   <div>
@@ -149,9 +157,9 @@ export default function Contact() {
                   <Button
                     type="submit"
                     className="w-full bg-accent text-white hover:bg-accent/90"
-                    disabled={contactMutation.isPending}
+                    disabled={isSubmitting}
                   >
-                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>

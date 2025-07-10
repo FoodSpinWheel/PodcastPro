@@ -5,41 +5,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import type { InsertContact } from "@shared/schema";
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  podcastLink: string;
+  message: string;
+}
 
 export default function Contact() {
-  const [formData, setFormData] = useState<InsertContact>({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     podcastLink: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Success!",
-        description: "Thank you for your interest! We'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", podcastLink: "", message: "" });
-    },
-    onError: (error) => {
-      toast({
-        title: "Error",
-        description: "Failed to submit the form. Please try again.",
-        variant: "destructive",
-      });
-    }
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) {
       toast({
@@ -49,7 +33,36 @@ export default function Contact() {
       });
       return;
     }
-    contactMutation.mutate(formData);
+
+    setIsSubmitting(true);
+    
+    try {
+      const form = e.target as HTMLFormElement;
+      const formDataObj = new FormData(form);
+      
+      const response = await fetch("https://formsubmit.co/levi@elevaterecap.com", {
+        method: "POST",
+        body: formDataObj
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Thank you for your interest! We'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", podcastLink: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit the form. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -79,6 +92,11 @@ export default function Contact() {
           <Card>
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* FormSubmit hidden fields */}
+                <input type="hidden" name="_subject" value="New Get Started Form - Elevate Recap" />
+                <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
+                <input type="hidden" name="_autoresponse" value="Thank you for your interest in Elevate Recap! We'll get back to you within 24 hours to discuss your podcast needs." />
+                
                 <div>
                   <Label htmlFor="name">Name *</Label>
                   <Input
@@ -129,9 +147,9 @@ export default function Contact() {
                 <Button
                   type="submit"
                   className="w-full bg-accent text-white hover:bg-accent/90"
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                 >
-                  {contactMutation.isPending ? "Sending..." : "Get Started Free"}
+                  {isSubmitting ? "Sending..." : "Get Started Free"}
                 </Button>
               </form>
             </CardContent>
