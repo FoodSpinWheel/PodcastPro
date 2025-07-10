@@ -51,15 +51,15 @@ export default function HowItWorks() {
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Podcast host interviewing guest in professional studio"
+              src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              alt="Professional podcast recording studio setup"
               className="w-full h-48 object-cover"
             />
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg md:col-span-2 lg:col-span-1">
             <img
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Modern podcast studio with professional equipment"
+              src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              alt="Professional microphone and audio equipment setup"
               className="w-full h-48 object-cover"
             />
           </div>
