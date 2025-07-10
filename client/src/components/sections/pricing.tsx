@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star, Crown, Zap, FileText, Mail, Video, FileImage, Search } from "lucide-react";
+import { Check, Star, Crown, Zap, FileText, Mail, Video, FileImage, Search, Youtube } from "lucide-react";
 import { useLocation } from "wouter";
 
 export default function Pricing() {
@@ -114,6 +114,17 @@ export default function Pricing() {
         "Suggested hashtags",
         "Recommended blog post topics",
         "Short paragraph on strategy"
+      ]
+    },
+    {
+      icon: Youtube,
+      name: "YouTube Description & Timestamps",
+      price: "$30",
+      features: [
+        "Optimized YouTube Description",
+        "Time-stamped Chapters",
+        "Keyword & hashtag suggestions",
+        "Title Variation Options"
       ]
     }
   ];
