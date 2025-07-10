@@ -25,7 +25,7 @@ export default function HowItWorks() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">How It Works</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            Elevate Recap makes it effortless to get professional show notes and episode summaries. Just send us your audio, and we'll handle everything from transcription to polished content creation. Our AI-powered process is fast, accurate, and designed to save you hours of work. In just a few days, you'll have ready-to-publish materials that help your podcast look and sound more professional.
+            Elevate Recap makes it effortless to get professional show notes and episode summaries. Just send us your audio, and we'll handle everything from transcription to polished content creation. Our process is fast, accurate, and designed to save you hours of work. In just a few days, you'll have ready-to-publish materials that help your podcast look and sound more professional.
           </p>
         </div>
         

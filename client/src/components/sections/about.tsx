@@ -10,7 +10,7 @@ export default function About() {
                 Elevate Recap was founded by podcasters who understand the time-consuming challenge of creating professional show notes and episode summaries. After spending countless hours writing, editing, and formatting content for our own shows, we realized there had to be a better way.
               </p>
               <p>
-                We help busy podcasters, content creators, and media professionals save time while maintaining the high-quality standards their audience expects. Our AI-powered process combines cutting-edge technology with human oversight to deliver polished, professional content that enhances your podcast's discoverability and engagement.
+                We help busy podcasters, content creators, and media professionals save time while maintaining the high-quality standards their audience expects. Our process combines cutting-edge technology with human oversight to deliver polished, professional content that enhances your podcast's discoverability and engagement.
               </p>
               <p>
                 Whether you're a solo podcaster juggling multiple responsibilities or a media company managing several shows, Elevate Recap takes the content creation burden off your plate. We've helped hundreds of podcasters reclaim their time and focus on what they do best—creating amazing content and growing their audience.
