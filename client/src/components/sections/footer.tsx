@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import { SiLinkedin } from "react-icons/si";
 import { Twitter } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -16,10 +17,13 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2">
-              <p className="text-gray-300 flex items-center">
+              <Link 
+                href="/contact" 
+                className="text-gray-300 hover:text-white flex items-center transition-colors"
+              >
                 <Mail className="h-4 w-4 mr-2" />
-                levi@elevaterecap.com
-              </p>
+                Contact Us
+              </Link>
             </div>
           </div>
           <div>
