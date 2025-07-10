@@ -132,8 +132,9 @@ export default function Contact() {
                         <SelectValue placeholder="Select an inquiry type" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="general">General Questions</SelectItem>
+                        <SelectItem value="general">General</SelectItem>
                         <SelectItem value="billing">Billing</SelectItem>
+                        <SelectItem value="enterprise">15+ Episodes</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
