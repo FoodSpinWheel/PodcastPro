@@ -60,6 +60,14 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <img
+            src="/attached_assets/austin-distel-VCFxt2yT1eQ-unsplash_1752120820192.jpg"
+            alt="Professional podcast studio setup with multiple microphones and equipment"
+            className="w-full max-w-4xl mx-auto h-96 object-cover rounded-xl shadow-2xl mb-12"
+          />
+        </div>
+        
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Ready to Elevate Your Podcast?</h2>
           <p className="text-lg text-gray-600">
