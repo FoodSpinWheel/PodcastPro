@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { SiLinkedin } from "react-icons/si";
+import { SiLinkedin, SiInstagram, SiX } from "react-icons/si";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -52,6 +52,12 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <SiLinkedin className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <SiInstagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <SiX className="h-6 w-6" />
               </a>
             </div>
           </div>
