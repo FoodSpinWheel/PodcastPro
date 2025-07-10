@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
@@ -25,6 +25,15 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+
+  // Check for URL parameters to auto-select inquiry type
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const inquiryParam = urlParams.get('inquiry');
+    if (inquiryParam === 'enterprise') {
+      setFormData(prev => ({ ...prev, inquiryType: 'enterprise' }));
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Check, Star, Crown, Zap, FileText, Mail, Video, FileImage, Search } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Pricing() {
+  const [, setLocation] = useLocation();
   const plans = [
     {
       name: "Starter",
@@ -136,6 +138,10 @@ export default function Pricing() {
     }
   };
 
+  const handleEliteContactClick = () => {
+    setLocation("/contact?inquiry=enterprise");
+  };
+
   return (
     <section id="pricing" className="py-16 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,7 +168,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <Button
-                onClick={handleContactClick}
+                onClick={plan.name === "Elite" ? handleEliteContactClick : handleContactClick}
                 variant={plan.buttonVariant}
                 className="w-full"
               >
