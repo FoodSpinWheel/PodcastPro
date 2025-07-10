@@ -40,6 +40,30 @@ export default function HowItWorks() {
             </div>
           ))}
         </div>
+        
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              alt="Professional podcast recording setup with microphones"
+              className="w-full h-48 object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              alt="Podcast host interviewing guest in professional studio"
+              className="w-full h-48 object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-lg md:col-span-2 lg:col-span-1">
+            <img
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              alt="Modern podcast studio with professional equipment"
+              className="w-full h-48 object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

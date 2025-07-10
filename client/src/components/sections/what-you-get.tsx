@@ -53,6 +53,19 @@ export default function WhatYouGet() {
             </div>
           ))}
         </div>
+        
+        <div className="mt-16 text-center">
+          <div className="max-w-4xl mx-auto">
+            <img
+              src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=400"
+              alt="Content creation and podcast editing workflow"
+              className="w-full h-64 object-cover rounded-xl shadow-2xl"
+            />
+            <p className="mt-6 text-lg text-gray-600 font-medium">
+              Transform your raw audio into professional, engaging content that builds your audience
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
