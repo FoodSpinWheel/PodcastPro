@@ -10,7 +10,7 @@ export default function HowItWorks() {
     {
       icon: Bot,
       title: "We Transcribe & Summarize",
-      description: "Our AI-powered transcription service converts your audio to text with high accuracy. Then, GPT-4 generates comprehensive summaries, timestamps, and all the content you need for maximum impact."
+      description: "Our transcription service converts your audio to text with high accuracy. Then, we generate comprehensive summaries, timestamps, and all the content you need for maximum impact."
     },
     {
       icon: Rocket,
