@@ -53,7 +53,7 @@ export default function Footer() {
               <a href="https://linkedin.com/in/elevate-recap-7a4b0b373" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <SiLinkedin className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/elevaterecap/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <SiInstagram className="h-6 w-6" />
               </a>
               <a href="https://x.com/elevaterecap" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
