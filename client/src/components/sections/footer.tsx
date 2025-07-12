@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { SiLinkedin, SiInstagram, SiX } from "react-icons/si";
+import { SiLinkedin, SiInstagram } from "react-icons/si";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -55,9 +55,6 @@ export default function Footer() {
               </a>
               <a href="https://www.instagram.com/elevaterecap/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <SiInstagram className="h-6 w-6" />
-              </a>
-              <a href="https://x.com/elevaterecap" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                <SiX className="h-6 w-6" />
               </a>
             </div>
           </div>
