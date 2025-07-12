@@ -75,8 +75,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <img
-            src="/attached_assets/austin-distel-VCFxt2yT1eQ-unsplash_1752120820192.jpg"
-            alt="Professional podcast studio setup with multiple microphones and equipment"
+            src="/attached_assets/jonathan-farber-KVlcVi-Ulgo-unsplash_1752121673716.jpg"
+            alt="Professional podcast microphone and recording equipment in a warm studio setting"
             className="w-full max-w-4xl mx-auto h-96 object-cover rounded-xl shadow-2xl mb-12"
           />
         </div>
