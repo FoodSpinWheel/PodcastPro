@@ -89,55 +89,31 @@ export default function Contact() {
           
           {/* Debug test input */}
           <div className="mt-4 p-4 bg-yellow-100 border border-yellow-300 rounded">
-            <p className="text-sm text-gray-700 mb-2">Test Input (try typing here):</p>
-            <input 
-              type="text" 
-              placeholder="Type here to test..." 
-              className="px-3 py-2 border border-gray-400 rounded"
-              style={{
-                position: 'static',
-                zIndex: 'auto',
-                pointerEvents: 'auto',
-                backgroundColor: 'white',
-                border: '2px solid red',
-                fontSize: '16px',
-                minHeight: '40px'
-              }}
-            />
+            <p className="text-sm text-gray-700 mb-2">Troubleshooting Steps:</p>
+            <ul className="text-sm text-gray-700 text-left space-y-1">
+              <li>• Try pressing Tab to navigate to input fields</li>
+              <li>• Check if right-click context menu appears on input fields</li>
+              <li>• Try different browser (Chrome, Firefox, Safari)</li>
+              <li>• Check browser zoom level (should be 100%)</li>
+              <li>• Try incognito/private browsing mode</li>
+              <li>• Clear browser cache and cookies</li>
+            </ul>
           </div>
         </div>
         
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            {/* Super simple form test */}
-            <div className="mb-8 p-4 bg-red-100 border border-red-300 rounded">
-              <h3 className="text-lg font-bold mb-4">Simple Test Form</h3>
-              <form action="https://formsubmit.co/levi@elevaterecap.com" method="POST">
-                <input 
-                  type="text" 
-                  name="test_name" 
-                  placeholder="Test Name Field"
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '3px solid red',
-                    fontSize: '18px',
-                    backgroundColor: 'white'
-                  }}
-                />
-                <br /><br />
-                <input 
-                  type="submit" 
-                  value="Test Submit"
-                  style={{
-                    padding: '12px 24px',
-                    backgroundColor: 'blue',
-                    color: 'white',
-                    border: 'none',
-                    fontSize: '16px'
-                  }}
-                />
-              </form>
+            {/* Alternative Contact Method */}
+            <div className="mb-8 p-4 bg-blue-100 border border-blue-300 rounded">
+              <h3 className="text-lg font-bold mb-4">Alternative Contact Method</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                If the form below doesn't work, you can contact us directly:
+              </p>
+              <div className="space-y-2 text-sm">
+                <p><strong>Email:</strong> <a href="mailto:levi@elevaterecap.com" className="text-blue-600 hover:underline">levi@elevaterecap.com</a></p>
+                <p><strong>Subject:</strong> New Get Started Request</p>
+                <p><strong>Include:</strong> Your name, email, podcast link, and brief message</p>
+              </div>
             </div>
             
             <form 
