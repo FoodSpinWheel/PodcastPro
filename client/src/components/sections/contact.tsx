@@ -87,34 +87,12 @@ export default function Contact() {
             Get started with a free trial episode and see the difference professional show notes can make.
           </p>
           
-          {/* Debug test input */}
-          <div className="mt-4 p-4 bg-yellow-100 border border-yellow-300 rounded">
-            <p className="text-sm text-gray-700 mb-2">Troubleshooting Steps:</p>
-            <ul className="text-sm text-gray-700 text-left space-y-1">
-              <li>• Try pressing Tab to navigate to input fields</li>
-              <li>• Check if right-click context menu appears on input fields</li>
-              <li>• Try different browser (Chrome, Firefox, Safari)</li>
-              <li>• Check browser zoom level (should be 100%)</li>
-              <li>• Try incognito/private browsing mode</li>
-              <li>• Clear browser cache and cookies</li>
-            </ul>
-          </div>
+
         </div>
         
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            {/* Alternative Contact Method */}
-            <div className="mb-8 p-4 bg-blue-100 border border-blue-300 rounded">
-              <h3 className="text-lg font-bold mb-4">Alternative Contact Method</h3>
-              <p className="text-sm text-gray-700 mb-3">
-                If the form below doesn't work, you can contact us directly:
-              </p>
-              <div className="space-y-2 text-sm">
-                <p><strong>Email:</strong> <a href="mailto:levi@elevaterecap.com" className="text-blue-600 hover:underline">levi@elevaterecap.com</a></p>
-                <p><strong>Subject:</strong> New Get Started Request</p>
-                <p><strong>Include:</strong> Your name, email, podcast link, and brief message</p>
-              </div>
-            </div>
+
             
             <form 
               action="https://formsubmit.co/levi@elevaterecap.com" 

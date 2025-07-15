@@ -100,18 +100,7 @@ export default function Contact() {
           </div>
           
           <div className="max-w-2xl mx-auto">
-            {/* Alternative Contact Method */}
-            <div className="mb-8 p-4 bg-blue-100 border border-blue-300 rounded">
-              <h3 className="text-lg font-bold mb-4">Alternative Contact Method</h3>
-              <p className="text-sm text-gray-700 mb-3">
-                If the form below doesn't work, you can contact us directly:
-              </p>
-              <div className="space-y-2 text-sm">
-                <p><strong>Email:</strong> <a href="mailto:levi@elevaterecap.com" className="text-blue-600 hover:underline">levi@elevaterecap.com</a></p>
-                <p><strong>Subject:</strong> Contact Form Inquiry</p>
-                <p><strong>Include:</strong> Your name, email, inquiry type, and message</p>
-              </div>
-            </div>
+
             
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <form 
