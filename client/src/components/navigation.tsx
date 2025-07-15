@@ -83,6 +83,12 @@ export default function Navigation() {
                 About
               </Link>
               <Link
+                href="/blog"
+                className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
                 href="/contact"
                 className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
@@ -141,6 +147,13 @@ export default function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                href="/blog"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 href="/contact"
