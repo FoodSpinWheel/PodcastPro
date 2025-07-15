@@ -94,12 +94,21 @@ input:disabled, textarea:disabled, select:disabled {
 }
 
 /* Debug styles to ensure visibility and interaction */
-input[type="text"], input[type="email"], textarea {
+input[type="text"], input[type="email"], input[type="url"], textarea, select {
   z-index: 1000 !important;
   position: relative !important;
   background-color: white !important;
   border: 2px solid #ccc !important;
   cursor: text !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus, select:focus {
+  border: 2px solid #0066cc !important;
+  background-color: #f0f8ff !important;
 }
 
 /* Remove any potential overlay issues */

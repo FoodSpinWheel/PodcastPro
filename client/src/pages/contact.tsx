@@ -124,13 +124,27 @@ export default function Contact() {
                       id="name"
                       name="name"
                       required
+                      autoComplete="name"
+                      tabIndex={1}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       style={{
                         pointerEvents: 'auto',
                         zIndex: 1001,
                         position: 'relative',
                         backgroundColor: 'white',
-                        cursor: 'text'
+                        cursor: 'text',
+                        outline: 'none',
+                        WebkitAppearance: 'none',
+                        MozAppearance: 'none',
+                        appearance: 'none'
+                      }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        e.target.focus();
+                      }}
+                      onFocus={(e) => {
+                        e.target.style.backgroundColor = '#f0f8ff';
+                        e.target.style.border = '2px solid #0066cc';
                       }}
                     />
                   </div>
@@ -184,13 +198,26 @@ export default function Contact() {
                     rows={6}
                     placeholder="Please describe your question or concern in detail..."
                     required
+                    tabIndex={4}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     style={{
                       pointerEvents: 'auto',
                       zIndex: 1001,
                       position: 'relative',
                       backgroundColor: 'white',
-                      cursor: 'text'
+                      cursor: 'text',
+                      outline: 'none',
+                      WebkitAppearance: 'none',
+                      MozAppearance: 'none',
+                      appearance: 'none'
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      e.target.focus();
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.backgroundColor = '#f0f8ff';
+                      e.target.style.border = '2px solid #0066cc';
                     }}
                   ></textarea>
                 </div>
