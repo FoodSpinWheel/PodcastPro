@@ -108,7 +108,7 @@ export default function Pricing() {
     {
       icon: Search,
       name: "SEO Keyword Report",
-      price: "$50",
+      price: "$25",
       features: [
         "List of 10-15 related keywords",
         "Suggested hashtags",
