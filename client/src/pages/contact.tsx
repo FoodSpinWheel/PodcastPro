@@ -100,83 +100,114 @@ export default function Contact() {
           </div>
           
           <div className="max-w-2xl mx-auto">
-            <Card style={{ pointerEvents: 'auto' }}>
-              <CardContent className="p-8" style={{ pointerEvents: 'auto' }}>
-                <form onSubmit={handleSubmit} className="space-y-6" style={{ pointerEvents: 'auto' }}>
-                  {/* FormSubmit hidden fields */}
-                  <input type="hidden" name="_subject" value="New Contact Form Submission - Elevate Recap" />
-                  <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
-                  <input type="hidden" name="_autoresponse" value="Thank you for contacting Elevate Recap! We'll get back to you within 24 hours." />
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <Label htmlFor="name">Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="mt-2"
-                        style={{ pointerEvents: 'auto' }}
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="email">Email *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="mt-2"
-                        style={{ pointerEvents: 'auto' }}
-                      />
-                    </div>
-                  </div>
-                  
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <form 
+                action="https://formsubmit.co/levi@elevaterecap.com" 
+                method="POST" 
+                className="space-y-6"
+                style={{ 
+                  pointerEvents: 'auto',
+                  zIndex: 1000,
+                  position: 'relative'
+                }}
+              >
+                {/* FormSubmit hidden fields */}
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Elevate Recap" />
+                <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting Elevate Recap! We'll get back to you within 24 hours." />
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="inquiryType">Inquiry Type *</Label>
-                    <Select value={formData.inquiryType} onValueChange={handleSelectChange}>
-                      <SelectTrigger className="mt-2">
-                        <SelectValue placeholder="Select an inquiry type" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="general">General</SelectItem>
-                        <SelectItem value="billing">Billing</SelectItem>
-                        <SelectItem value="enterprise">15+ Episodes</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <input type="hidden" name="inquiryType" value={formData.inquiryType} />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={6}
-                      placeholder="Please describe your question or concern in detail..."
-                      className="mt-2"
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
                       required
-                      style={{ pointerEvents: 'auto' }}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      style={{
+                        pointerEvents: 'auto',
+                        zIndex: 1001,
+                        position: 'relative',
+                        backgroundColor: 'white',
+                        cursor: 'text'
+                      }}
                     />
                   </div>
-                  
-                  <Button
-                    type="submit"
-                    className="w-full bg-accent text-white hover:bg-accent/90"
-                    disabled={isSubmitting}
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      style={{
+                        pointerEvents: 'auto',
+                        zIndex: 1001,
+                        position: 'relative',
+                        backgroundColor: 'white',
+                        cursor: 'text'
+                      }}
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">Inquiry Type *</label>
+                  <select 
+                    id="inquiryType" 
+                    name="inquiryType" 
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    style={{
+                      pointerEvents: 'auto',
+                      zIndex: 1001,
+                      position: 'relative',
+                      backgroundColor: 'white',
+                      cursor: 'pointer'
+                    }}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    <option value="">Select an inquiry type</option>
+                    <option value="general">General</option>
+                    <option value="billing">Billing</option>
+                    <option value="enterprise">15+ Episodes</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    placeholder="Please describe your question or concern in detail..."
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    style={{
+                      pointerEvents: 'auto',
+                      zIndex: 1001,
+                      position: 'relative',
+                      backgroundColor: 'white',
+                      cursor: 'text'
+                    }}
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                  style={{
+                    pointerEvents: 'auto',
+                    zIndex: 1001,
+                    position: 'relative'
+                  }}
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
 
           <div className="mt-12 text-center">

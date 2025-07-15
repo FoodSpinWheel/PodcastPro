@@ -89,80 +89,107 @@ export default function Contact() {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <Card style={{ pointerEvents: 'auto' }}>
-            <CardContent className="p-8" style={{ pointerEvents: 'auto' }}>
-              <form onSubmit={handleSubmit} className="space-y-6" style={{ pointerEvents: 'auto' }}>
-                {/* FormSubmit hidden fields */}
-                <input type="hidden" name="_subject" value="New Get Started Form - Elevate Recap" />
-                <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
-                <input type="hidden" name="_autoresponse" value="Thank you for your interest in Elevate Recap! We'll get back to you within 24 hours to discuss your podcast needs." />
-                
-                <div style={{ pointerEvents: 'auto', zIndex: 1000, position: 'relative' }}>
-                  <Label htmlFor="name">Name *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="mt-2"
-                    style={{ 
-                      pointerEvents: 'auto', 
-                      zIndex: 1001,
-                      position: 'relative',
-                      backgroundColor: 'white',
-                      border: '2px solid #ccc'
-                    }}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="mt-2"
-                    style={{ pointerEvents: 'auto' }}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="podcastLink">Podcast Link</Label>
-                  <Input
-                    id="podcastLink"
-                    name="podcastLink"
-                    type="url"
-                    value={formData.podcastLink}
-                    onChange={handleChange}
-                    placeholder="https://your-podcast-link.com"
-                    className="mt-2"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    placeholder="Tell us about your podcast and what you're looking for..."
-                    className="mt-2"
-                    style={{ pointerEvents: 'auto' }}
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-accent text-white hover:bg-accent/90"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Get Started Free"}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <form 
+              action="https://formsubmit.co/levi@elevaterecap.com" 
+              method="POST" 
+              className="space-y-6"
+              style={{ 
+                pointerEvents: 'auto',
+                zIndex: 1000,
+                position: 'relative'
+              }}
+            >
+              {/* FormSubmit hidden fields */}
+              <input type="hidden" name="_subject" value="New Get Started Form - Elevate Recap" />
+              <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
+              <input type="hidden" name="_autoresponse" value="Thank you for your interest in Elevate Recap! We'll get back to you within 24 hours to discuss your podcast needs." />
+              
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  style={{
+                    pointerEvents: 'auto',
+                    zIndex: 1001,
+                    position: 'relative',
+                    backgroundColor: 'white',
+                    cursor: 'text'
+                  }}
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  style={{
+                    pointerEvents: 'auto',
+                    zIndex: 1001,
+                    position: 'relative',
+                    backgroundColor: 'white',
+                    cursor: 'text'
+                  }}
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="podcastLink" className="block text-sm font-medium text-gray-700 mb-2">Podcast Link</label>
+                <input
+                  type="url"
+                  id="podcastLink"
+                  name="podcastLink"
+                  placeholder="https://your-podcast-link.com"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  style={{
+                    pointerEvents: 'auto',
+                    zIndex: 1001,
+                    position: 'relative',
+                    backgroundColor: 'white',
+                    cursor: 'text'
+                  }}
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  placeholder="Tell us about your podcast and what you're looking for..."
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  style={{
+                    pointerEvents: 'auto',
+                    zIndex: 1001,
+                    position: 'relative',
+                    backgroundColor: 'white',
+                    cursor: 'text'
+                  }}
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                style={{
+                  pointerEvents: 'auto',
+                  zIndex: 1001,
+                  position: 'relative'
+                }}
+              >
+                Get Started Free
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
