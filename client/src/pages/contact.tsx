@@ -90,8 +90,8 @@ export default function Contact() {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <section className="py-16 bg-light-gray pt-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-light-gray pt-32" style={{ pointerEvents: 'auto' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" style={{ pointerEvents: 'auto' }}>
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h1>
             <p className="text-lg text-gray-600">
@@ -100,9 +100,9 @@ export default function Contact() {
           </div>
           
           <div className="max-w-2xl mx-auto">
-            <Card>
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+            <Card style={{ pointerEvents: 'auto' }}>
+              <CardContent className="p-8" style={{ pointerEvents: 'auto' }}>
+                <form onSubmit={handleSubmit} className="space-y-6" style={{ pointerEvents: 'auto' }}>
                   {/* FormSubmit hidden fields */}
                   <input type="hidden" name="_subject" value="New Contact Form Submission - Elevate Recap" />
                   <input type="hidden" name="_cc" value="levi@elevaterecap.com" />

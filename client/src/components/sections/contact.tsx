@@ -71,8 +71,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-light-gray">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-16 bg-light-gray" style={{ pointerEvents: 'auto' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ pointerEvents: 'auto' }}>
         <div className="mb-12 text-center">
           <img
             src="/attached_assets/jonathan-farber-KVlcVi-Ulgo-unsplash_1752121673716.jpg"
@@ -89,15 +89,15 @@ export default function Contact() {
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <Card>
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+          <Card style={{ pointerEvents: 'auto' }}>
+            <CardContent className="p-8" style={{ pointerEvents: 'auto' }}>
+              <form onSubmit={handleSubmit} className="space-y-6" style={{ pointerEvents: 'auto' }}>
                 {/* FormSubmit hidden fields */}
                 <input type="hidden" name="_subject" value="New Get Started Form - Elevate Recap" />
                 <input type="hidden" name="_cc" value="levi@elevaterecap.com" />
                 <input type="hidden" name="_autoresponse" value="Thank you for your interest in Elevate Recap! We'll get back to you within 24 hours to discuss your podcast needs." />
                 
-                <div>
+                <div style={{ pointerEvents: 'auto', zIndex: 1000, position: 'relative' }}>
                   <Label htmlFor="name">Name *</Label>
                   <Input
                     id="name"
@@ -106,7 +106,13 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="mt-2"
-                    style={{ pointerEvents: 'auto' }}
+                    style={{ 
+                      pointerEvents: 'auto', 
+                      zIndex: 1001,
+                      position: 'relative',
+                      backgroundColor: 'white',
+                      border: '2px solid #ccc'
+                    }}
                   />
                 </div>
                 <div>

@@ -77,6 +77,39 @@ input, textarea, select {
   user-select: text !important;
 }
 
+/* Force all form elements and their containers to be interactive */
+form, form *, .form-container, .form-container * {
+  pointer-events: auto !important;
+}
+
+/* Override any disabled states */
+input:disabled, textarea:disabled, select:disabled {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+/* Ensure cards and content containers don't block interaction */
+.card, .card-content, [data-card], [data-card-content] {
+  pointer-events: auto !important;
+}
+
+/* Debug styles to ensure visibility and interaction */
+input[type="text"], input[type="email"], textarea {
+  z-index: 1000 !important;
+  position: relative !important;
+  background-color: white !important;
+  border: 2px solid #ccc !important;
+  cursor: text !important;
+}
+
+/* Remove any potential overlay issues */
+* {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
