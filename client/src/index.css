@@ -119,6 +119,28 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, te
   user-select: auto !important;
 }
 
+/* Nuclear option - force all inputs to work */
+input, textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  user-select: text !important;
+  pointer-events: auto !important;
+  position: static !important;
+  z-index: auto !important;
+  background: white !important;
+  border: 2px solid #ccc !important;
+  font-size: 16px !important;
+  min-height: 40px !important;
+  padding: 8px !important;
+}
+
+/* Remove any CSS that might block interaction */
+.form-disabled, [disabled], :disabled {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  background: white !important;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }

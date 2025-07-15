@@ -86,10 +86,60 @@ export default function Contact() {
           <p className="text-lg text-gray-600">
             Get started with a free trial episode and see the difference professional show notes can make.
           </p>
+          
+          {/* Debug test input */}
+          <div className="mt-4 p-4 bg-yellow-100 border border-yellow-300 rounded">
+            <p className="text-sm text-gray-700 mb-2">Test Input (try typing here):</p>
+            <input 
+              type="text" 
+              placeholder="Type here to test..." 
+              className="px-3 py-2 border border-gray-400 rounded"
+              style={{
+                position: 'static',
+                zIndex: 'auto',
+                pointerEvents: 'auto',
+                backgroundColor: 'white',
+                border: '2px solid red',
+                fontSize: '16px',
+                minHeight: '40px'
+              }}
+            />
+          </div>
         </div>
         
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg">
+            {/* Super simple form test */}
+            <div className="mb-8 p-4 bg-red-100 border border-red-300 rounded">
+              <h3 className="text-lg font-bold mb-4">Simple Test Form</h3>
+              <form action="https://formsubmit.co/levi@elevaterecap.com" method="POST">
+                <input 
+                  type="text" 
+                  name="test_name" 
+                  placeholder="Test Name Field"
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    border: '3px solid red',
+                    fontSize: '18px',
+                    backgroundColor: 'white'
+                  }}
+                />
+                <br /><br />
+                <input 
+                  type="submit" 
+                  value="Test Submit"
+                  style={{
+                    padding: '12px 24px',
+                    backgroundColor: 'blue',
+                    color: 'white',
+                    border: 'none',
+                    fontSize: '16px'
+                  }}
+                />
+              </form>
+            </div>
+            
             <form 
               action="https://formsubmit.co/levi@elevaterecap.com" 
               method="POST" 
