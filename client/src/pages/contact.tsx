@@ -118,6 +118,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="mt-2"
+                        style={{ pointerEvents: 'auto' }}
                       />
                     </div>
                     <div>
@@ -130,6 +131,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         className="mt-2"
+                        style={{ pointerEvents: 'auto' }}
                       />
                     </div>
                   </div>
@@ -161,6 +163,7 @@ export default function Contact() {
                       placeholder="Please describe your question or concern in detail..."
                       className="mt-2"
                       required
+                      style={{ pointerEvents: 'auto' }}
                     />
                   </div>
                   

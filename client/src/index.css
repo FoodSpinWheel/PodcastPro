@@ -71,6 +71,12 @@
   }
 }
 
+/* Ensure form inputs are always interactive */
+input, textarea, select {
+  pointer-events: auto !important;
+  user-select: text !important;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }

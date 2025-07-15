@@ -106,6 +106,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="mt-2"
+                    style={{ pointerEvents: 'auto' }}
                   />
                 </div>
                 <div>
@@ -118,6 +119,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="mt-2"
+                    style={{ pointerEvents: 'auto' }}
                   />
                 </div>
                 <div>
@@ -142,6 +144,7 @@ export default function Contact() {
                     rows={4}
                     placeholder="Tell us about your podcast and what you're looking for..."
                     className="mt-2"
+                    style={{ pointerEvents: 'auto' }}
                   />
                 </div>
                 <Button
