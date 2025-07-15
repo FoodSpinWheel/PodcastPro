@@ -20,6 +20,14 @@ export default function Navigation() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
+    
+    // If we're not on the home page, redirect to home page with anchor
+    if (location !== '/') {
+      window.location.href = `/#${targetId}`;
+      return;
+    }
+    
+    // If we're on the home page, scroll to the section
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       const offsetTop = targetElement.offsetTop - 80;
