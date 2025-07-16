@@ -118,6 +118,17 @@ export default function Contact() {
                   required
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
+                <select 
+                  name="inquiryType" 
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">Select an inquiry type</option>
+                  <option value="general">General</option>
+                  <option value="billing">Billing</option>
+                  <option value="enterprise">15+ Episodes</option>
+                  <option value="other">Other</option>
+                </select>
                 <textarea 
                   name="message" 
                   placeholder="Your message"
