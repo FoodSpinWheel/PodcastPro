@@ -68,6 +68,17 @@ export default function Contact() {
               </button>
             </form>
           </div>
+          
+          <div className="mt-8 text-center">
+            <div className="bg-blue-50 p-4 rounded-lg max-w-2xl mx-auto">
+              <p className="text-blue-700">
+                <strong>Form not working?</strong> Email us directly: 
+                <a href="mailto:levi@elevaterecap.com" className="font-semibold underline ml-1">
+                  levi@elevaterecap.com
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

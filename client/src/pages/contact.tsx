@@ -89,6 +89,14 @@ export default function Contact() {
                 <p>
                   <strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM MST
                 </p>
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                  <p className="font-semibold text-blue-800 mb-2">Having trouble with the form?</p>
+                  <p className="text-blue-700">Email us directly at: 
+                    <a href="mailto:levi@elevaterecap.com" className="font-semibold underline ml-1">
+                      levi@elevaterecap.com
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

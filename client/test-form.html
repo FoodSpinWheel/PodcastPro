@@ -29,16 +29,16 @@
     <form action="https://formspree.io/f/mvgqoqro" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
-        <select name="inquiryType" required>
-            <option value="">Select inquiry type</option>
-            <option value="general">General</option>
-            <option value="billing">Billing</option>
-            <option value="enterprise">15+ Episodes</option>
-            <option value="other">Other</option>
-        </select>
-        <textarea name="message" placeholder="Your message" rows="4"></textarea>
+        <textarea name="message" placeholder="Your message" rows="4" required></textarea>
         <button type="submit">Submit Test</button>
     </form>
+    
+    <br><br>
+    <h2>Alternative Test - Direct Link</h2>
+    <p>If the form above doesn't work, try this direct link:</p>
+    <a href="mailto:levi@elevaterecap.com?subject=Test Contact&body=This is a test message from the contact form.">
+        Send Email Directly
+    </a>
 
     <script>
         document.querySelector('form').addEventListener('submit', function(e) {
