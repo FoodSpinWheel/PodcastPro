@@ -20,25 +20,31 @@ export default function Contact() {
 
         </div>
         
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-lg text-gray-700 mb-6">
-              Ready to transform your podcast with professional show notes?
-            </p>
-            <div className="space-y-4">
-              <p className="text-gray-600">
-                Contact us to get started with your free trial episode:
-              </p>
-              <a 
-                href="mailto:levi@elevaterecap.com?subject=Free Trial Episode Request&body=Hi, I'm interested in getting a free trial episode for my podcast. Please let me know the next steps."
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Get Free Trial Episode
-              </a>
-              <p className="text-sm text-gray-500">
-                Email: levi@elevaterecap.com
-              </p>
-            </div>
+            <form
+              action="https://formspree.io/f/mvgqoqro"
+              className="fs-form"
+              target="_top"
+              method="POST"
+            >
+              <div className="fs-field mb-4">
+                <label className="fs-label block text-sm font-medium text-gray-700 mb-2" htmlFor="name">Name</label>
+                <input className="fs-input w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="name" name="name" />
+              </div>
+              <div className="fs-field mb-4">
+                <label className="fs-label block text-sm font-medium text-gray-700 mb-2" htmlFor="email">Email</label>
+                <input className="fs-input w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="email" name="email" required />
+              </div>
+              <div className="fs-field mb-4">
+                <label className="fs-label block text-sm font-medium text-gray-700 mb-2" htmlFor="message">Message</label>
+                <textarea className="fs-textarea w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="message" name="message" rows={4}></textarea>
+                <p className="fs-description text-sm text-gray-500 mt-1">We usually respond within 1-2 business days.</p>
+              </div>
+              <div className="fs-button-group">
+                <button className="fs-button w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors font-semibold" type="submit">Send</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
