@@ -1,8 +1,7 @@
 export default function Contact() {
-
   return (
-    <section id="contact" className="py-16 bg-light-gray" style={{ pointerEvents: 'auto' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ pointerEvents: 'auto' }}>
+    <section id="contact" className="py-16 bg-light-gray">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <img
             src="/attached_assets/jonathan-farber-KVlcVi-Ulgo-unsplash_1752121673716.jpg"
@@ -11,31 +10,28 @@ export default function Contact() {
           />
         </div>
         
-        <div id="contact-form" className="text-center mb-12">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Ready to Elevate Your Podcast?</h2>
           <p className="text-lg text-gray-600">
             Get started with a free trial episode and see the difference professional show notes can make.
           </p>
-          
-
         </div>
         
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="mb-6 text-center">
-              <p className="text-lg text-gray-700 mb-4">
-                Ready to transform your podcast with professional show notes?
-              </p>
-              <p className="text-gray-600">
-                Fill out the form below to get started with your free trial episode.
-              </p>
-            </div>
+        <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+          <div className="mb-6 text-center">
+            <p className="text-lg text-gray-700 mb-4">
+              Ready to transform your podcast with professional show notes?
+            </p>
+            <p className="text-gray-600">
+              Fill out the form below to get started with your free trial episode.
+            </p>
+          </div>
             
-            <form 
-              action="https://formspree.io/f/mvgqoqro" 
-              method="POST"
-              className="space-y-6"
-            >
+          <form 
+            action="https://formspree.io/f/mvgqoqro" 
+            method="POST"
+            className="space-y-6"
+          >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name *
@@ -120,18 +116,18 @@ export default function Contact() {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-              >
-                Send Message
-              </button>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+              style={{ pointerEvents: 'auto', zIndex: 1000 }}
+            >
+              Send Message
+            </button>
 
-              <p className="text-sm text-gray-500 text-center">
-                We typically respond within 1-2 business days.
-              </p>
-            </form>
-          </div>
+            <p className="text-sm text-gray-500 text-center">
+              We typically respond within 1-2 business days.
+            </p>
+          </form>
         </div>
       </div>
     </section>

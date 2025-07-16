@@ -16,15 +16,14 @@ export default function Contact() {
             </p>
           </div>
           
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h2>
-              
-              <form 
-                action="https://formspree.io/f/mvgqoqro" 
-                method="POST"
-                className="space-y-6"
-              >
+          <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h2>
+            
+            <form 
+              action="https://formspree.io/f/mvgqoqro" 
+              method="POST"
+              className="space-y-6"
+            >
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-2">
                     Name *
@@ -110,18 +109,18 @@ export default function Contact() {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-                >
-                  Send Message
-                </button>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                style={{ pointerEvents: 'auto', zIndex: 1000 }}
+              >
+                Send Message
+              </button>
 
-                <p className="text-sm text-gray-500 text-center">
-                  We typically respond within 1-2 business days.
-                </p>
-              </form>
-            </div>
+              <p className="text-sm text-gray-500 text-center">
+                We typically respond within 1-2 business days.
+              </p>
+            </form>
           </div>
 
           <div className="mt-12 text-center">
