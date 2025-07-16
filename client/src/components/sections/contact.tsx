@@ -20,32 +20,25 @@ export default function Contact() {
 
         </div>
         
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <div className="mb-6">
               <p className="text-lg text-gray-700 mb-4">
                 Ready to transform your podcast with professional show notes?
               </p>
-              <p className="text-gray-600">
-                Contact us to get started with your free trial episode:
-              </p>
             </div>
             
-            <div className="space-y-4">
-              <a 
-                href="mailto:levi@elevaterecap.com?subject=Free Trial Episode Request&body=Hi, I'm interested in getting a free trial episode for my podcast. Please let me know the next steps."
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors w-full"
-              >
-                Get Free Trial Episode
-              </a>
-              
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                <p className="text-sm text-gray-600">
-                  <strong>Email:</strong> levi@elevaterecap.com<br/>
-                  <strong>Response Time:</strong> 1-2 business days
-                </p>
-              </div>
-            </div>
+            <iframe 
+              src="https://docs.google.com/forms/d/e/1FAIpQLScVVyHEwliWfNg2RlcEibOQM2h_TABBX6-Ehgg3gxsrH_HcIg/viewform?embedded=true" 
+              width="100%" 
+              height="741" 
+              frameBorder="0" 
+              marginHeight="0" 
+              marginWidth="0"
+              className="rounded-lg"
+            >
+              Loading…
+            </iframe>
           </div>
         </div>
       </div>
