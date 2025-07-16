@@ -71,74 +71,14 @@
   }
 }
 
-/* Ensure form inputs are always interactive */
+/* Form interaction fixes */
+form, input, textarea, select, button {
+  pointer-events: auto;
+  user-select: auto;
+}
+
 input, textarea, select {
-  pointer-events: auto !important;
-  user-select: text !important;
-}
-
-/* Force all form elements and their containers to be interactive */
-form, form *, .form-container, .form-container * {
-  pointer-events: auto !important;
-}
-
-/* Override any disabled states */
-input:disabled, textarea:disabled, select:disabled {
-  pointer-events: auto !important;
-  opacity: 1 !important;
-}
-
-/* Ensure cards and content containers don't block interaction */
-.card, .card-content, [data-card], [data-card-content] {
-  pointer-events: auto !important;
-}
-
-/* Debug styles to ensure visibility and interaction */
-input[type="text"], input[type="email"], input[type="url"], textarea, select {
-  z-index: 1000 !important;
-  position: relative !important;
-  background-color: white !important;
-  border: 2px solid #ccc !important;
-  cursor: text !important;
-  outline: none !important;
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-}
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus, select:focus {
-  border: 2px solid #0066cc !important;
-  background-color: #f0f8ff !important;
-}
-
-/* Remove any potential overlay issues */
-* {
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
-  -ms-user-select: auto !important;
-  user-select: auto !important;
-}
-
-/* Nuclear option - force all inputs to work */
-input, textarea {
-  -webkit-user-select: text !important;
-  -moz-user-select: text !important;
-  user-select: text !important;
-  pointer-events: auto !important;
-  position: static !important;
-  z-index: auto !important;
-  background: white !important;
-  border: 2px solid #ccc !important;
-  font-size: 16px !important;
-  min-height: 40px !important;
-  padding: 8px !important;
-}
-
-/* Remove any CSS that might block interaction */
-.form-disabled, [disabled], :disabled {
-  pointer-events: auto !important;
-  opacity: 1 !important;
-  background: white !important;
+  user-select: text;
 }
 
 .scroll-smooth {
