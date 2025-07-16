@@ -52,7 +52,21 @@ export default function Contact() {
                   rows={6}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 ></textarea>
-                <button type="submit">Send</button>
+                <button 
+                  type="submit"
+                  style={{
+                    width: '100%',
+                    padding: '12px 16px',
+                    backgroundColor: '#2563eb',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    fontSize: '16px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Send
+                </button>
               </form>
             </div>
           </div>
