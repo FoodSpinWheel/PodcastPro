@@ -29,13 +29,13 @@ export default function Contact() {
             </div>
             
             <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLScVVyHEwliWfNg2RlcEibOQM2h_TABBX6-Ehgg3gxsrH_HcIg/viewform?embedded=true" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdicODiZsYTGXrFVdwoG7CXnRpMilUDUnelz_6DUpnCZx-k-w/viewform?embedded=true" 
               width="100%" 
-              height="741" 
+              height="800" 
               frameBorder="0" 
               marginHeight="0" 
               marginWidth="0"
-              className="rounded-lg"
+              className="rounded-lg w-full"
             >
               Loading…
             </iframe>
