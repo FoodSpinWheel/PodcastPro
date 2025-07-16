@@ -20,10 +20,12 @@ export default function Contact() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h2>
             
             <form 
-              action="https://formspree.io/f/mvgqoqro" 
-              method="POST"
+              name="contact-page"
+              method="POST" 
+              data-netlify="true"
               className="space-y-6"
             >
+              <input type="hidden" name="form-name" value="contact-page" />
                 <div>
                   <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-2">
                     Name *

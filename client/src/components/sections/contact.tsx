@@ -28,10 +28,12 @@ export default function Contact() {
           </div>
             
           <form 
-            action="https://formspree.io/f/mvgqoqro" 
-            method="POST"
+            name="homepage-contact"
+            method="POST" 
+            data-netlify="true"
             className="space-y-6"
           >
+            <input type="hidden" name="form-name" value="homepage-contact" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name *
