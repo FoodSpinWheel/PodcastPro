@@ -20,25 +20,117 @@ export default function Contact() {
 
         </div>
         
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="mb-6">
+            <div className="mb-6 text-center">
               <p className="text-lg text-gray-700 mb-4">
                 Ready to transform your podcast with professional show notes?
               </p>
+              <p className="text-gray-600">
+                Fill out the form below to get started with your free trial episode.
+              </p>
             </div>
             
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdicODiZsYTGXrFVdwoG7CXnRpMilUDUnelz_6DUpnCZx-k-w/viewform?embedded=true" 
-              width="100%" 
-              height="800" 
-              frameBorder="0" 
-              marginHeight="0" 
-              marginWidth="0"
-              className="rounded-lg w-full"
+            <form 
+              action="https://formspree.io/f/mvgqoqro" 
+              method="POST"
+              className="space-y-6"
             >
-              Loading…
-            </iframe>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="podcast-name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Podcast Name
+                </label>
+                <input
+                  type="text"
+                  id="podcast-name"
+                  name="podcast-name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  placeholder="Your podcast name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="podcast-link" className="block text-sm font-medium text-gray-700 mb-2">
+                  Podcast Episode Link
+                </label>
+                <input
+                  type="url"
+                  id="podcast-link"
+                  name="podcast-link"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  placeholder="https://your-podcast-episode-link.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="inquiry-type" className="block text-sm font-medium text-gray-700 mb-2">
+                  Inquiry Type
+                </label>
+                <select
+                  id="inquiry-type"
+                  name="inquiry-type"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                >
+                  <option value="">Select inquiry type</option>
+                  <option value="free-trial">Free Trial Episode</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="pricing">Pricing Information</option>
+                  <option value="enterprise">15+ Episodes (Enterprise)</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-vertical"
+                  placeholder="Tell us about your podcast and what you're looking for..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+              >
+                Send Message
+              </button>
+
+              <p className="text-sm text-gray-500 text-center">
+                We typically respond within 1-2 business days.
+              </p>
+            </form>
           </div>
         </div>
       </div>
