@@ -3,8 +3,30 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import fs from "fs";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static HTML files from client directory
+  app.get("*.html", async (req, res, next) => {
+    const htmlPath = path.resolve(
+      import.meta.dirname,
+      "..",
+      "client",
+      req.path.substring(1) // Remove leading slash
+    );
+
+    try {
+      if (fs.existsSync(htmlPath)) {
+        const htmlContent = await fs.promises.readFile(htmlPath, "utf-8");
+        res.status(200).set({ "Content-Type": "text/html" }).end(htmlContent);
+      } else {
+        next();
+      }
+    } catch (e) {
+      next(e);
+    }
+  });
   // Contact form submission
   app.post("/api/contact", async (req, res) => {
     try {
