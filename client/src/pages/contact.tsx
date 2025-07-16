@@ -17,66 +17,52 @@ export default function Contact() {
           </div>
           
           <div className="max-w-2xl mx-auto">
-
-            
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <form 
-                action="https://formspree.io/f/mvgqoqro" 
-                method="POST" 
-                className="space-y-6"
-                onSubmit={(e) => {
-                  console.log('Form submission triggered');
-                  console.log('Form action:', e.currentTarget.action);
-                  console.log('Form method:', e.currentTarget.method);
-                }}
-              >
-                <input 
-                  type="text" 
-                  name="name" 
-                  placeholder="Your Name" 
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <input 
-                  type="email" 
-                  name="email" 
-                  placeholder="Your Email" 
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <select 
-                  name="inquiryType" 
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="">Select an inquiry type</option>
-                  <option value="general">General</option>
-                  <option value="billing">Billing</option>
-                  <option value="enterprise">15+ Episodes</option>
-                  <option value="other">Other</option>
-                </select>
-                <textarea 
-                  name="message" 
-                  placeholder="Your message"
-                  rows={6}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                ></textarea>
-                <button 
-                  type="submit"
-                  style={{
-                    width: '100%',
-                    padding: '12px 16px',
-                    backgroundColor: '#2563eb',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '6px',
-                    fontSize: '16px',
-                    cursor: 'pointer'
-                  }}
-                >
-                  Send
-                </button>
-              </form>
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+              
+              <div className="space-y-6">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="font-semibold text-gray-800 mb-2">Email Us</h3>
+                  <a 
+                    href="mailto:levi@elevaterecap.com" 
+                    className="text-blue-600 hover:text-blue-800 font-medium text-lg"
+                  >
+                    levi@elevaterecap.com
+                  </a>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-2">General Inquiries</h4>
+                    <a 
+                      href="mailto:levi@elevaterecap.com?subject=General Inquiry"
+                      className="text-blue-600 hover:text-blue-800 text-sm"
+                    >
+                      Send Email
+                    </a>
+                  </div>
+                  
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">Free Trial</h4>
+                    <a 
+                      href="mailto:levi@elevaterecap.com?subject=Free Trial Episode Request&body=Hi, I'm interested in getting a free trial episode for my podcast."
+                      className="text-green-600 hover:text-green-800 text-sm"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                  
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-2">15+ Episodes</h4>
+                    <a 
+                      href="mailto:levi@elevaterecap.com?subject=Enterprise Inquiry - 15+ Episodes&body=Hi, I'm interested in bulk pricing for 15+ episodes."
+                      className="text-purple-600 hover:text-purple-800 text-sm"
+                    >
+                      Get Quote
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
