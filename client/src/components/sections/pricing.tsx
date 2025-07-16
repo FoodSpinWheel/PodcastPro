@@ -27,7 +27,8 @@ export default function Pricing() {
         "Everything in Starter",
         "Priority processing",
         "Dedicated project manager",
-        "Extended revisions"
+        "Extended revisions",
+        "10% discount on add-ons"
       ],
       buttonText: "Get Started",
       buttonVariant: "outline" as const,
@@ -40,7 +41,7 @@ export default function Pricing() {
       features: [
         "Everything in Growth",
         "Monthly performance insights",
-        "Discounted add-ons",
+        "15% discount on add-ons",
         "Priority support"
       ],
       buttonText: "Get Started",
@@ -55,6 +56,7 @@ export default function Pricing() {
         "Everything in Pro",
         "Custom solutions",
         "Volume pricing",
+        "25% discount on add-ons",
         "Enterprise support"
       ],
       buttonText: "Contact Us",
