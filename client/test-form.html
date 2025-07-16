@@ -1,89 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Test</title>
+    <title>Test Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
-            background: #f5f5f5;
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 50px auto; 
+            padding: 20px; 
         }
-        .test-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        input, textarea, select, button { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
         }
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: 3px solid #333;
-            font-size: 18px;
-            background: white;
-            box-sizing: border-box;
-        }
-        button {
-            background: #007bff;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .debug {
-            background: #ffe6e6;
-            border: 2px solid red;
-            padding: 10px;
-            margin: 10px 0;
+        button { 
+            background-color: #2563eb; 
+            color: white; 
+            cursor: pointer; 
         }
     </style>
 </head>
 <body>
-    <h1>Input Test Page</h1>
-    <p>This page tests if inputs work outside of React. Try typing in the fields below:</p>
+    <h1>Test Contact Form</h1>
     
-    <div class="test-container">
-        <h2>Test 1: Basic Input</h2>
-        <input type="text" placeholder="Type here..." id="test1">
-        <div class="debug">Status: <span id="status1">No input detected</span></div>
-    </div>
-    
-    <div class="test-container">
-        <h2>Test 2: Form with Submit</h2>
-        <form action="https://formsubmit.co/levi@elevaterecap.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Submit Test</button>
-        </form>
-    </div>
-    
-    <div class="test-container">
-        <h2>Test 3: JavaScript Event Test</h2>
-        <input type="text" id="jsTest" placeholder="JavaScript will show what you type below">
-        <div class="debug">You typed: <span id="jsOutput">Nothing yet</span></div>
-    </div>
-    
+    <form action="https://formspree.io/f/mvgqoqro" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <select name="inquiryType" required>
+            <option value="">Select inquiry type</option>
+            <option value="general">General</option>
+            <option value="billing">Billing</option>
+            <option value="enterprise">15+ Episodes</option>
+            <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Your message" rows="4"></textarea>
+        <button type="submit">Submit Test</button>
+    </form>
+
     <script>
-        // Test 1: Basic input detection
-        document.getElementById('test1').addEventListener('input', function() {
-            document.getElementById('status1').textContent = 'Input detected! Value: ' + this.value;
-        });
-        
-        // Test 3: JavaScript output
-        document.getElementById('jsTest').addEventListener('input', function() {
-            document.getElementById('jsOutput').textContent = this.value || 'Nothing yet';
-        });
-        
-        // Focus test
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Page loaded, attempting to focus first input...');
-            document.getElementById('test1').focus();
+        document.querySelector('form').addEventListener('submit', function(e) {
+            console.log('Form submit event triggered');
+            console.log('Form action:', this.action);
+            console.log('Form method:', this.method);
+            // Don't prevent default - let it submit
         });
     </script>
 </body>

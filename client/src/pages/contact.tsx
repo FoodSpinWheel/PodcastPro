@@ -20,7 +20,16 @@ export default function Contact() {
 
             
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <form action="https://formspree.io/f/mvgqoqro" method="POST" className="space-y-6">
+              <form 
+                action="https://formspree.io/f/mvgqoqro" 
+                method="POST" 
+                className="space-y-6"
+                onSubmit={(e) => {
+                  console.log('Form submission triggered');
+                  console.log('Form action:', e.currentTarget.action);
+                  console.log('Form method:', e.currentTarget.method);
+                }}
+              >
                 <input 
                   type="text" 
                   name="name" 
