@@ -7,8 +7,8 @@ export default function Contact() {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <section className="py-16 bg-light-gray pt-32" style={{ pointerEvents: 'auto' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" style={{ pointerEvents: 'auto' }}>
+      <section className="py-16 bg-light-gray pt-32">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h1>
             <p className="text-lg text-gray-600">
@@ -16,53 +16,20 @@ export default function Contact() {
             </p>
           </div>
           
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h2>
-              
-              <div className="space-y-6">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-800 mb-2">Email Us</h3>
-                  <a 
-                    href="mailto:levi@elevaterecap.com" 
-                    className="text-blue-600 hover:text-blue-800 font-medium text-lg"
-                  >
-                    levi@elevaterecap.com
-                  </a>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-blue-800 mb-2">General Inquiries</h4>
-                    <a 
-                      href="mailto:levi@elevaterecap.com?subject=General Inquiry"
-                      className="text-blue-600 hover:text-blue-800 text-sm"
-                    >
-                      Send Email
-                    </a>
-                  </div>
-                  
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-green-800 mb-2">Free Trial</h4>
-                    <a 
-                      href="mailto:levi@elevaterecap.com?subject=Free Trial Episode Request&body=Hi, I'm interested in getting a free trial episode for my podcast."
-                      className="text-green-600 hover:text-green-800 text-sm"
-                    >
-                      Get Started
-                    </a>
-                  </div>
-                  
-                  <div className="bg-purple-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-purple-800 mb-2">15+ Episodes</h4>
-                    <a 
-                      href="mailto:levi@elevaterecap.com?subject=Enterprise Inquiry - 15+ Episodes&body=Hi, I'm interested in bulk pricing for 15+ episodes."
-                      className="text-purple-600 hover:text-purple-800 text-sm"
-                    >
-                      Get Quote
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdicODiZsYTGXrFVdwoG7CXnRpMilUDUnelz_6DUpnCZx-k-w/viewform?embedded=true" 
+                width="100%" 
+                height="947" 
+                frameBorder="0" 
+                marginHeight="0" 
+                marginWidth="0"
+                className="rounded-lg"
+                style={{ minHeight: "947px" }}
+              >
+                Loading…
+              </iframe>
             </div>
           </div>
 

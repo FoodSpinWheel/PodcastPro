@@ -123,12 +123,12 @@ The application is designed to be deployed on platforms like Replit, Vercel, or 
 ## Recent Changes: Latest modifications with dates
 
 ### July 16, 2025
-- **Major Change**: Removed all form code from website per user request
-- **Implementation**: Replaced forms with direct email contact methods
-- **Home Page**: "Get Free Trial Episode" now links directly to pre-filled email
-- **Contact Page**: Three categorized email options (General, Free Trial, Enterprise)
-- **User Experience**: Cleaner interface without form submission issues
-- **Contact Methods**: All interactions now use reliable mailto: links with pre-filled subjects
+- **Major Change**: Replaced contact page with embedded Google Forms iframe
+- **Implementation**: Contact page now displays Google Form directly embedded
+- **Form URL**: https://docs.google.com/forms/d/e/1FAIpQLSdicODiZsYTGXrFVdwoG7CXnRpMilUDUnelz_6DUpnCZx-k-w/viewform
+- **Home Page**: Still uses direct email contact method with pre-filled email
+- **User Experience**: Reliable form submission through Google's infrastructure
+- **Previous Issue**: Removed all React-based forms due to system-level input blocking in Replit environment
 
 ### July 15, 2025
 - **Critical Issue**: Contact forms experiencing system-level input blocking across all browsers
