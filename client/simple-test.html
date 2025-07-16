@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form Test</title>
+</head>
+<body>
+    <h1>Minimal Form Test</h1>
+    
+    <form action="https://httpbin.org/post" method="POST">
+        <input type="text" name="test" value="hello" required>
+        <button type="submit">Test Submit</button>
+    </form>
+    
+    <br><br>
+    
+    <form action="https://formspree.io/f/mvgqoqro" method="POST">
+        <input type="email" name="email" value="test@test.com" required>
+        <input type="text" name="name" value="Test User">
+        <button type="submit">Formspree Test</button>
+    </form>
+
+    <script>
+        console.log('Page loaded');
+        document.addEventListener('click', function(e) {
+            console.log('Click detected on:', e.target.tagName, e.target.type);
+        });
+        
+        document.addEventListener('submit', function(e) {
+            console.log('Submit event detected');
+            console.log('Form action:', e.target.action);
+            console.log('Form method:', e.target.method);
+        });
+    </script>
+</body>
+</html>
