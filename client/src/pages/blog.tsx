@@ -20,7 +20,28 @@ export default function Blog() {
   const [, setLocation] = useLocation();
 
   const handleGetStarted = () => {
-    setLocation("/#contact");
+    // Navigate to homepage first
+    setLocation("/");
+    
+    // Then scroll to the contact form specifically after a brief delay to ensure page loads
+    setTimeout(() => {
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'center'
+        });
+      } else {
+        // Fallback to contact section if form ID not found
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    }, 200);
   };
 
   const blogPost: BlogPost = {
