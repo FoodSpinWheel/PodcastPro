@@ -28,6 +28,7 @@ export default function Contact() {
           </div>
             
           <form 
+            id="contact-form"
             name="homepage-contact"
             method="POST" 
             data-netlify="true"
