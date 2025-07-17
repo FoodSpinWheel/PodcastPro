@@ -1,6 +1,5 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/sections/footer";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User } from "lucide-react";
 
@@ -17,76 +16,119 @@ interface BlogPost {
 }
 
 export default function Blog() {
-  const blogPosts: BlogPost[] = [
-    {
-      id: "1",
-      title: "5 Essential Elements Every Podcast Show Notes Should Include",
-      excerpt: "Learn the key components that make show notes effective for both listeners and search engines, helping your podcast reach a wider audience.",
-      content: "",
-      author: "Elevate Recap Team",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      category: "Best Practices",
-      image: "/attached_assets/jonathan-farber-KVlcVi-Ulgo-unsplash_1752121673716.jpg"
-    },
-    {
-      id: "2", 
-      title: "How Professional Show Notes Can Double Your Podcast Downloads",
-      excerpt: "Discover how well-crafted show notes improve discoverability, listener engagement, and help convert casual browsers into dedicated subscribers.",
-      content: "",
-      author: "Elevate Recap Team",
-      date: "2024-01-12",
-      readTime: "7 min read",
-      category: "Growth",
-      image: "/attached_assets/austin-distel-VCFxt2yT1eQ-unsplash_1752120820192.jpg"
-    },
-    {
-      id: "3",
-      title: "The Ultimate Guide to Podcast SEO: Getting Found in 2024",
-      excerpt: "Master the art of podcast SEO with actionable strategies that help your content rank higher and attract organic listeners through search.",
-      content: "",
-      author: "Elevate Recap Team", 
-      date: "2024-01-10",
-      readTime: "10 min read",
-      category: "SEO",
-      image: "/attached_assets/kit-formerly-convertkit-waxDxYM2XI4-unsplash_1752120368045.jpg"
-    },
-    {
-      id: "4",
-      title: "Time-Saving Tools Every Podcaster Should Know About",
-      excerpt: "Streamline your podcast workflow with these essential tools and services that help you focus on creating great content instead of tedious tasks.",
-      content: "",
-      author: "Elevate Recap Team",
-      date: "2024-01-08",
-      readTime: "6 min read", 
-      category: "Tools",
-      image: "/attached_assets/pexels-magda-ehlers-pexels-1054713_1752120368045.jpg"
-    },
-    {
-      id: "5",
-      title: "Creating Compelling Social Media Content from Your Podcast Episodes",
-      excerpt: "Transform your podcast content into engaging social media posts that drive traffic back to your episodes and grow your audience.",
-      content: "",
-      author: "Elevate Recap Team",
-      date: "2024-01-05", 
-      readTime: "8 min read",
-      category: "Social Media",
-      image: "/attached_assets/pexels-jean-balzan-210755-682082_1752120368045.jpg"
-    },
-    {
-      id: "6",
-      title: "Why Timestamps Matter: Making Your Podcast More Accessible",
-      excerpt: "Learn how detailed timestamps improve user experience, accessibility, and help listeners find exactly what they're looking for in your episodes.",
-      content: "",
-      author: "Elevate Recap Team",
-      date: "2024-01-03",
-      readTime: "4 min read",
-      category: "Accessibility",
-      image: "/attached_assets/austin-distel-VCFxt2yT1eQ-unsplash_1752120368045.jpg"
-    }
-  ];
+  const blogPost: BlogPost = {
+    id: "1",
+    title: "5 Essential Elements Every Podcast Show Notes Should Include (With Examples)",
+    excerpt: "Podcast show notes are more than just a summary — they're a powerful SEO tool, a listener guide, and a content marketing asset all rolled into one.",
+    content: `🎙️ 5 Essential Elements Every Podcast Show Notes Should Include (With Examples)
 
-  const categories = ["All", "Best Practices", "Growth", "SEO", "Tools", "Social Media", "Accessibility"];
+Podcast show notes are more than just a summary — they're a powerful SEO tool, a listener guide, and a content marketing asset all rolled into one. Whether you're a seasoned podcaster or just launching your first episode, crafting strategic show notes can significantly improve your discoverability, engagement, and listener retention.
+
+In this post, we'll break down the five essential elements every podcast show notes should include — with tips to help you stand out in search and serve your audience better.
+
+⸻
+
+## 1. 🎯 Compelling Episode Summary
+
+**Why it matters:** A strong summary helps potential listeners quickly grasp what the episode is about and why they should tune in. This is also where search engines look first for relevant keywords.
+
+**What to include:**
+• The core topic or takeaway
+• Who the guest is and their expertise
+• A teaser or hook (e.g. "You won't believe what happened at minute 14!")
+
+**SEO Tip:** Use target keywords naturally in the first 1–2 sentences. For example, if your podcast is about entrepreneurship, include terms like "startup strategies", "founder insights", or "business growth tips".
+
+**Example:**
+*In this episode, we sit down with marketing strategist Jane Doe to uncover 7 proven growth hacks for early-stage startups. From building an audience with zero budget to leveraging LinkedIn for lead gen, you'll walk away with actionable tactics you can implement today.*
+
+⸻
+
+## 2. 📝 Timestamps for Key Moments
+
+**Why it matters:** Timestamps improve the user experience by letting listeners jump to the parts that matter most. They also increase engagement and dwell time — a win for SEO.
+
+**What to include:**
+• A breakdown of major topics covered
+• Specific time markers (e.g. 04:45 – How to pitch investors)
+
+**Bonus:** Timestamps make your content easier to repurpose (like turning segments into short videos or blog snippets).
+
+**Example:**
+⏱️ 02:10 – Jane's journey from agency life to startup founder
+⏱️ 08:45 – The biggest mistake new marketers make
+⏱️ 14:20 – How to build an email list with no budget
+
+⸻
+
+## 3. 🔗 Relevant Links & Resources
+
+**Why it matters:** Links provide value to your audience, boost authority, and can improve search rankings through internal and external linking.
+
+**What to include:**
+• Tools, books, or websites mentioned
+• Guest's website or social profiles
+• Internal links to related episodes or blog posts
+
+**SEO Tip:** Link to high-authority sources, and always include internal links to keep visitors on your site longer.
+
+**Example:**
+📚 Resources mentioned:
+– ConvertKit – Email marketing tool
+– Episode 12: How to Build a Content Calendar
+
+⸻
+
+## 4. 👤 Guest Bio or Host Highlights
+
+**Why it matters:** Featuring a guest bio adds credibility and helps listeners understand why they should care. For solo shows, highlight the host's expertise or personal story.
+
+**What to include:**
+• Guest's background and relevant achievements
+• Social media handles or a headshot
+• For solo episodes, a brief host intro with authority-building info
+
+**SEO Tip:** Include keywords like "interview with [industry expert]" or "featuring [guest's name]" to help search engines index your episode properly.
+
+**Example:**
+*Jane Doe is a growth marketing expert and founder of ScaleUp.io. She's helped over 200 startups hit six-figure revenues and is known for her no-BS growth tactics.*
+
+⸻
+
+## 5. 📥 Clear Call-to-Action (CTA)
+
+**Why it matters:** You've captured attention — now tell your audience what to do next. CTAs turn passive listeners into engaged followers, subscribers, or buyers.
+
+**What to include:**
+• Subscribe, rate & review prompt
+• Newsletter or free resource opt-in
+• Link to premium content, courses, or offers
+
+**SEO Tip:** Use CTA keywords like "download," "subscribe," or "join" to help attract and convert search traffic.
+
+**Example:**
+*🔔 Enjoyed this episode? Be sure to subscribe on Spotify and leave a review on Apple Podcasts. Want the full show notes and bonus content? Join our free newsletter.*
+
+⸻
+
+## Final Thoughts
+
+Great show notes do more than summarize — they convert, optimize, and scale your podcast's reach.
+
+By including these five essential elements:
+1. A compelling summary
+2. Timestamps
+3. Links and resources
+4. Guest or host bios
+5. Clear CTAs
+
+…you'll not only improve SEO, but also create a better experience for your listeners — and ultimately grow your podcast faster.`,
+    author: "Elevate Recap Team",
+    date: "2025-01-16",
+    readTime: "8 min read",
+    category: "Best Practices",
+    image: "/attached_assets/pexels-magda-ehlers-pexels-1054713_1752120368045.jpg"
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -106,123 +148,60 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Blog Posts Section */}
+      {/* Blog Article Section */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 mb-12 justify-center">
-            {categories.map((category) => (
-              <Badge
-                key={category}
-                variant={category === "All" ? "default" : "outline"}
-                className={`cursor-pointer px-4 py-2 ${
-                  category === "All" 
-                    ? "bg-accent text-white hover:bg-accent/90" 
-                    : "hover:bg-accent hover:text-white"
-                }`}
-              >
-                {category}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Featured Post */}
-          <div className="mb-16">
-            <Card className="overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative h-64 lg:h-auto">
-                  <img
-                    src={blogPosts[0].image}
-                    alt={blogPosts[0].title}
-                    className="w-full h-full object-cover"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-accent text-white">
-                    Featured
-                  </Badge>
-                </div>
-                <CardContent className="p-8 flex flex-col justify-center">
-                  <Badge variant="outline" className="w-fit mb-4">
-                    {blogPosts[0].category}
-                  </Badge>
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                    {blogPosts[0].title}
-                  </h2>
-                  <p className="text-gray-600 mb-6 text-lg">
-                    {blogPosts[0].excerpt}
-                  </p>
-                  <div className="flex items-center text-sm text-gray-500 space-x-4">
-                    <div className="flex items-center">
-                      <User className="h-4 w-4 mr-1" />
-                      {blogPosts[0].author}
-                    </div>
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(blogPosts[0].date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {blogPosts[0].readTime}
-                    </div>
-                  </div>
-                </CardContent>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Article Header */}
+          <div className="mb-8">
+            <Badge variant="outline" className="mb-4">
+              {blogPost.category}
+            </Badge>
+            <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              {blogPost.title}
+            </h1>
+            <div className="flex items-center text-sm text-gray-500 space-x-4 mb-6">
+              <div className="flex items-center">
+                <User className="h-4 w-4 mr-1" />
+                {blogPost.author}
               </div>
-            </Card>
+              <div className="flex items-center">
+                <Calendar className="h-4 w-4 mr-1" />
+                {new Date(blogPost.date).toLocaleDateString()}
+              </div>
+              <div className="flex items-center">
+                <Clock className="h-4 w-4 mr-1" />
+                {blogPost.readTime}
+              </div>
+            </div>
           </div>
 
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(1).map((post) => (
-              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="relative h-48">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <Badge variant="outline" className="mb-3">
-                    {post.category}
-                  </Badge>
-                  <h3 className="text-xl font-semibold text-primary mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 text-sm line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center text-xs text-gray-500 space-x-3">
-                    <div className="flex items-center">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-3 w-3 mr-1" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Article Image */}
+          <div className="mb-8">
+            <img
+              src={blogPost.image}
+              alt={blogPost.title}
+              className="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg"
+            />
           </div>
 
-          {/* Newsletter Signup */}
-          <div className="mt-16 bg-accent/10 rounded-xl p-8 text-center">
+          {/* Article Content */}
+          <div className="prose prose-lg max-w-none">
+            <div className="whitespace-pre-line text-gray-700 leading-relaxed text-lg">
+              {blogPost.content}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-12 bg-accent/10 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold text-primary mb-4">
-              Stay Updated with Podcast Tips
+              Ready to Elevate Your Podcast?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Get weekly insights on podcast growth, content creation, and industry trends delivered straight to your inbox.
+              Get professional show notes that follow these best practices. Start with a free trial episode today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent"
-              />
-              <button className="bg-accent text-white px-6 py-3 rounded-lg hover:bg-accent/90 transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
+            <button className="bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-colors font-semibold">
+              Get Your Free Trial Episode
+            </button>
           </div>
         </div>
       </section>

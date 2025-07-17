@@ -131,6 +131,9 @@ The application is designed to be deployed on platforms like Replit, Vercel, or 
 - **Form Fields**: Name, Email, Podcast Name, Episode Link, Inquiry Type, Message
 - **User Experience**: Professional, responsive forms with automatic spam protection
 - **Architecture**: Zero-config form handling when deployed to Netlify - submissions appear in dashboard
+- **Navigation Fix**: Fixed "Get Started" buttons to properly scroll to contact form section
+- **Pricing Updates**: Added discount tiers for add-ons (Growth: 10%, Pro: 15%, Elite: 25%)
+- **Blog Content**: Updated blog page with single featured article "5 Essential Elements Every Podcast Show Notes Should Include" with full content and different image
 
 ### July 15, 2025
 - **Critical Issue**: Contact forms experiencing system-level input blocking across all browsers
