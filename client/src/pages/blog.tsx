@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/sections/footer";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User } from "lucide-react";
+import { useLocation } from "wouter";
 
 interface BlogPost {
   id: string;
@@ -16,6 +17,12 @@ interface BlogPost {
 }
 
 export default function Blog() {
+  const [, setLocation] = useLocation();
+
+  const handleGetStarted = () => {
+    setLocation("/#contact");
+  };
+
   const blogPost: BlogPost = {
     id: "1",
     title: "5 Essential Elements Every Podcast Show Notes Should Include (With Examples)",
@@ -199,7 +206,10 @@ By including these five essential elements:
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Get professional show notes that follow these best practices. Start with a free trial episode today.
             </p>
-            <button className="bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-colors font-semibold">
+            <button 
+              onClick={handleGetStarted}
+              className="bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-colors font-semibold"
+            >
               Get Your Free Trial Episode
             </button>
           </div>
